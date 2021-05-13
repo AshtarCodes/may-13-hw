@@ -1,4 +1,33 @@
-// Five codewars arrays for may 13 homework
+// Three questions to practice
+/* One:
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24 */
+
+function multiplyIntArr (arr) {
+  return arr.reduce((acc, c) => acc * c, 0)
+};
+
+/* Two:
+You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed 'age' of 0. Return a new array with [youngest age, oldest age, difference between the youngest and oldest age].*/
+
+function youngestToOldestAgeDifference (arr) {
+  let youngest = Math.min(...arr);
+  let oldest = Math.max(...arr);
+  let difference = oldest - youngest;
+  return [youngest, oldest, difference];
+};
+
+/* Three:
+Sum all the numbers of the array except the highest and the lowest element (the value, not the index!).
+Example:
+[ 6, 2, 1, 8, 10 ] => 16
+[ 1, 1, 11, 2, 3 ] => 6*/
+
+function lookMaNoTips (arr) {
+  return arr.slice(1,-1).reduce((acc, c) => acc + c, 0);
+};
+
+// Five CODEWARS arrays for may 13 homework
 
 //1. P: [correct answers to exam], [student's answers to exam] R: integer of score: +4 correct, -1 wrong, 0 for blank; if <0 return 0. Arrs are not empty, are same length
 // E: checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]) → 6
@@ -15,7 +44,7 @@ function checkExam (arr1, arr2) {
       }
     }  
     return (result < 0) ? 0 : result;
-  };
+};
   
   //solution 2
   function checkExam(array1, array2) {
@@ -95,4 +124,4 @@ function checkExam (arr1, arr2) {
   // solution 2 
   function addLength(str) {
     return str.split(' ').map((word) => word + ` ${word.length}`);  
-  }
+  };
