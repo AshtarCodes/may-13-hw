@@ -132,45 +132,63 @@ let sheepleArray = original.slice().push('for real, man') // returns ['OG', 'Arr
 console.log(original) //returns ['OG', 'Array']
 ```
 ### Arr.pop
-
+The pop method removes an item from the end of an array. 
 #### Syntax
-
+arr.pop()
 #### Time Complexity
-
+O(1) - constant time since the end of the array is easy to remove and add items from. No indeces need to be updated. 
 #### Examples
-
+```js
+let arr = [1,2,3,4]
+console.log(arr.pop()) // returns [1,2,3]
+```
 ### Arr.shift
-
+It removes an item from the beginning of an array. All other indeces are updated to reflect the removed element. 
 #### Syntax
-
+arr.shift()
 #### Time Complexity
-
+O(n) - linear time, since the indeces of all other elements need to be updated
 #### Examples
-
+```js
+let arr = [1,2,3,4]
+console.log(arr.shift()) // returns [2,3,4]
+```
 ### Arr.push
-
+This method adds an element to the end of an array. 
 #### Syntax
-
+arr.push(el)
 #### Time Complexity
-
+O(1) - constant time, since it will always be one operation no matter the size of the array.
 #### Examples
-
+```js
+let arr = [1,2,3,4]
+console.log(arr.push(5)) // returns [1,2,3,4,5]
+```
 ### Arr.unshift
-
+This method adds one element to the beginning of an array. 
 #### Syntax
-
+arr.unshift(el)
 #### Time Complexity
-
+O(n) - linear time, since the indeces of each element needs to be updated. 
 #### Examples
-
+```js
+let arr = [1,2,3,4]
+console.log(arr.unshift(0)) // returns [0,1,2,3,4]
+```
 ### Arr.includes
-
+This method checks if at least one element contains the element you pass it. It returns a boolean, true or false. Notably, this method correctly identifies NaN.  
 #### Syntax
+arr.includes(el, fromIndex)
+
+fromIndex is optional - it specifies which index to begin searching from.
 
 #### Time Complexity
-
+O(n), since it performs a linear search. 
 #### Examples
-
+```js
+let arr = [1,2,3,4]
+console.log(arr.includes(3)) // returns true
+```
 ### Arr.indexOf
 
 #### Syntax
